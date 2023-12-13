@@ -12,9 +12,8 @@ body {
     height: 100vw;
     overflow-X:hidden;
     overflow-y: hidden;
-    /*background-image: url(../fotios/portada-lengua.jpg);
-    background-size: cover;*/
-
+    background-image: url(../img/foto2.jpg);
+    background-size: cover;
 }
 .inicio{
     display: grid;
@@ -125,7 +124,6 @@ body {
     top: 50%;
     left: 4%;
     text-align: justify;
-    
 }
 
 
