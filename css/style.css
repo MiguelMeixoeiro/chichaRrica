@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
-  background-color: #d9d9d9;
+  background-color: #262626;
   /* background-image: url(../img/foto1.jpg); */
   background-size: cover;/
 }
@@ -23,10 +23,12 @@ body {
 
 .menu, .menu__btn{
   display:none;
+  color: #D9D9D9;
 }
 
 .menu__icon i{
   display:none;
+  color: #D9D9D9;
 }
 
 
@@ -38,7 +40,7 @@ header nav {
 }
 
 header .logo {
-  color: #595959;
+  color: #D9D9D9;
   font-size: 1.5rem;
 }
 
@@ -59,6 +61,32 @@ header li a {
   color: #fff;
   font-weight: 300;
 }
+/* Agrega este bloque al final de tu archivo de estilo CSS */
+.carrito-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px; /* Ajusta la distancia superior según sea necesario */
+}
+
+.carrito-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.rectangulo {
+  width: 500px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #D9D9D9;
+  filter: blur(.5px);
+  margin-bottom: 40px; /* Ajusta la separación entre los rectángulos según sea necesario */
+}
+
 
 header li a:hover {
   color: #f20519;
@@ -74,9 +102,7 @@ header li a:hover {
   z-index: -1;
 }
 
-.heroBig {
-  background-image: url(../img/foto2.jpg);
-}
+
 
 .bg {
   background-size: cover;
