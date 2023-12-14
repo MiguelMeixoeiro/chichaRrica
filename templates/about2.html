@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="icon" sizes="16x16 32x32 48x48" type="image/svg" href="./img/favicon.svg" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/about.css">
-  <link rel="stylesheet" href="./css/normalize.css">
+
   <title>About</title>
 </head>
 <body class="no-scroll">
@@ -26,7 +28,7 @@
       <ul>
         <li><a href="#acceso" id="sliderRojo" class="toggle-logo">CONTACTO</a></li>
         <li><a href="../templates/about2.html">ABOUT</a></li>
-        <li><a href="#galeria">GALERIA</a></li>
+        <li><a href="../templates/gallery.html">GALERIA</a></li>
         <li><a href="#contacto">ACCESO</a></li>
       </ul>
     </nav>
@@ -38,10 +40,47 @@
     </figure>
     <article class="about__article">
         <h2 class="about__title">MIGUEL MEIXOEIROS</h2>
-        <div class="about__description">
-            Se realizan sesiones fotográficas en estudio y exterior. Se editan y retocan fotografías. Capturo imágenes que comuniquen o transmitan una idea o personalidad. Esto aplica tanto para la fotografía de personas, como de productos, paisajes o mascotas. Se decía que las fotos robaban el alma y es por su capacidad de mostrar la esencia de lo fotografiado. CONTACTA CONMIGO por los distintos medios.
+        <div class="about__description1">
+          <p class="description">
+            Explorador de la oscuridad y maestro de la luz, Miguel Meixoeiro no es un fotógrafo convencional. 
+            Su lente captura la esencia de la vida urbana de Madrid, revelando la belleza en lo disruptivo y lo antisocial.
+          </p>
+          <p class="description">
+            Con un ojo agudo para el arte urbano y los retratos personales, su estética se sumerge en la mezcla única de la cultura gótica y el estilo macarra madrileño.
+            Cada imagen es una narrativa visual, una historia que solo él puede contar a través de su lente rebelde.
+          </p>
+          <p class="description phone">
+            Descubre la singularidad en cada sombra, la poesía en la rebeldía. Las fotografías de Miguel Meixoeiro son más que simples imágenes; son declaraciones de arte audaz.
+          </p>
+          <p class="description phone">
+            Sumérgete en su visión disruptiva y lleva a casa una parte de Madrid en forma de fotografías de gran formato, perfectas para adornar tus espacios más grandes con autenticidad y estilo.
+          </p>
         </div>
     </article>
+    <!-- slide rojo que aparece cuando clickamos en ACCESO -->
+    <section class="sliderLateral" id="sliderLateralContainer">
+
+      <img src="../img/logoBlanco.svg" alt="Logotipo Miguel Meixoeiro" class="logoSlideBlanco">
+
+      <section class="slider__formulario">
+        <form class="form">
+          <input class="input" type="text" placeholder="Nombre">
+          <input class="input" type="text" placeholder="E-Mail">
+          <textarea class="textarea" placeholder="Escribe aquí tu mensaje"></textarea> 
+          <div class="center">
+            <button class="button">Submit</button>
+          </div>
+        </form>
+      </section>
+      <section class="redes">
+        <img src="../img/facebook.svg" alt="icono de facebook" class="redes--formato">
+        <img src="../img/instagram.svg" alt="icono instagram" class="redes--formato">
+        <img src="../img/linkedin.svg" alt="icono linkedin" class="redes--formato">
+        <img src="../img/twiter.svg" alt="icono twiter" class="redes--formato twit">
+      </section>
+      
+
+    </section>
 </main>
 
   <footer>
