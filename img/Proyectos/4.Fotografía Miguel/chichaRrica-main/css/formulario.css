@@ -1,0 +1,429 @@
+*{ box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+  font-size:15px;
+  position:relative;
+  padding-bottom:3em;
+  background-image: url(../fotios/fondologin.png);
+  background-size: cover;/* Esto ajusta la imagen para cubrir todo el fondo */
+  background-repeat: no-repeat; /* Esto evita que la imagen se repita */
+  background-attachment: fixed; /* Esto fija la imagen de fondo para que no se desplace con el contenido */
+
+}
+
+.ventanaformulario{
+  position: absolute;
+  margin-left: 37rem;
+  margin-top: 1rem;
+  width: 22rem;
+  height: 26rem;
+  display:flex;
+  overflow:hidden;
+  transform: scale(0);
+  justify-content: center;
+  align-items:center;
+  border-radius: 10%;
+  background:transparent;
+  backdrop-filter: blur(50px);
+  transition: transform .5s ease, height .2s ease;
+
+}
+
+
+.ventanaformulario.active{
+  height: 28rem;
+}
+
+
+
+.ventanaformulario.active-popup{
+  transform: scale(1);
+  transition: transform .5s ease, height .2s ease;
+}
+
+
+.ventanaformulario.active-popup2{
+  transform: scale(1);
+  transition: transform .5s ease, height .2s ease;
+}
+
+
+.ventanaformulario.active-popup2 .styleform.login{
+  transition: transform .18s ease;
+  transform:translateX(-20rem);
+}
+
+
+.ventanaformulario.active-popup2 .styleform.registro{
+  position: absolute;
+  transform:translateX(0rem);
+
+}
+
+.ventanaformulario .styleform {
+  font-size: 20px;
+  padding: 4rem;
+  width: 100%;
+}
+
+.ventanaformulario .icon-close{
+  position: absolute;
+  top:1.2rem;
+  right:1.5rem;
+  font-size:2rem;
+  color: white;
+  cursor:pointer;
+  z-index: 1;
+
+}
+ 
+
+.ventanaformulario .styleform.login {
+  transition: transform .18s ease;
+  transform:translateX(0);
+
+}
+.ventanaformulario.active .styleform.login {
+ transition:none;
+ transform: translateX(-22rem);
+ 
+}
+
+.ventanaformulario .styleform.registro{
+  position: absolute;
+  transform:translateX(22rem);
+
+}
+.ventanaformulario.active .styleform.registro{
+  transition:transform .18s ease;
+  transform:translateX(0);
+
+}
+
+
+.styleform h2{
+ text-align: center;
+ color: rgb(0, 0, 0);
+}
+
+
+.inputbox{
+  margin-bottom: 4rem;
+  position: relative;
+  height: 2rem;
+  border-bottom:2px solid #000000;
+  margin: 30px 0;
+}
+
+.inputbox input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline:none;
+
+  
+}
+
+.inputbox label{
+  position: absolute;
+  top: 2rem;
+  left: 0.2rem;
+  font-size:1.2rem;
+  color: #ffffff;
+  transform:translateY(-100%);
+  pointer-events:none;
+  transition: 0.3s;
+}
+
+.continuar{
+  width: 100%;
+  background: #000000;
+  font-size:1rem;
+  color: white;
+  border: none;
+  outline:none;
+  border-radius: 6rem;
+  cursor: pointer;
+  display: block;
+  padding:9px;
+  padding-bottom: 12px;
+  text-align: center;
+}
+/*para conseguir que las palabras del formulario cambien de posición al dar click*/
+.inputbox input:focus + label,
+.inputbox input:valid + label {
+  top: 10px;
+}
+
+.textoregistro .linkregistro {
+  font-size:1.1rem;
+  padding-top:1rem;
+  cursor: pointer;
+  padding-left: 1.5rem;
+  text-decoration:none;
+  color: #ffffff;
+}
+
+.textologin .linklogin {
+  font-size:1.1rem;
+  padding-top:0.8rem;
+  cursor: pointer;
+  padding-left: 1rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.botones{
+  padding: 5%;
+  margin-left: 21rem;
+  margin-right: 5rem;
+  margin-top: 5rem;
+
+  
+}
+
+
+.estilofooter{
+    display:flex;
+    position: fixed;
+    background-color:black;
+    height: 10%;
+    padding: 5% 5%;
+    bottom: 0%;
+    width: 100%;
+    align-items: center;
+  }
+
+.logosize {
+  height:6rem;
+  width: auto;
+  padding-left:540%;
+  
+}
+
+.socialmedia{
+  background-color: aqua;
+  color: antiquewhite;
+}
+
+.registro{
+   padding: 1%;
+   margin-bottom:2rem;
+   margin-top:1rem;
+
+}
+.login{
+  padding:1%;
+
+
+}
+
+  .boton {
+    background-color:#000000;
+    padding: 3% 5%;
+    border:0;
+    border-radius:20rem;
+    width: 10em;
+    height: auto;
+    cursor: pointer;
+    margin-left: 14rem;
+    color: white;
+    font-size: 1.5em;
+    transition: background-color 0.3s ease; 
+
+  }
+  .boton:hover {
+    background-color:red;
+  }
+
+  .boton2  {
+    background-color:#000000;
+    padding: 3% 5%;
+    border:0;
+    border-radius:20rem;
+    width: 10em;
+    height: auto;
+    cursor: pointer;
+    margin-left: 14rem;
+    margin-bottom: 10rem;
+    color: white;
+    font-size: 1.5em;
+    transition: background-color 0.3s ease; 
+  }
+
+  .boton2:hover {
+    background-color:red;
+  }
+
+
+ /* Estilos para dispositivos móviles */
+  @media screen and (max-width: 767px) {
+
+  body {
+    display: flex;
+    justify-content: center;}
+  .botones {
+      padding: 5%;
+      margin-left: 8.5rem;
+      margin-right: 22rem;
+      margin-top: 12rem;
+      
+    }
+    .logosize {
+      height:7rem;
+      width: auto;
+      padding-left:30%;
+      padding-bottom:5%;
+      
+    }
+
+    .estilofooter{
+      display:flex;
+      position: fixed;
+      background-color:black;
+      height: 30%;
+      padding: 5% 5%;
+      bottom: 0%;
+      width: 100%;
+    }
+  
+    .textologin .linklogin {
+      font-size:1rem;
+      padding-top:1rem;
+      cursor: pointer;
+      padding-left: 1;
+      text-decoration: none;
+      margin-right: 20px;
+      color: #ffffff;
+    }
+  
+    
+
+/*adaptando el formulario a responsive*/
+
+    .ventanaformulario{
+      position: absolute;
+      margin-left: 2rem;
+      margin-right:2rem;
+      margin-top: 5rem;
+      width: auto;
+      height: 26rem;
+      display:flex;
+      overflow:hidden;
+      transform: scale(0);
+      justify-content: center;
+      align-items:center;
+      border-radius: 10%;
+      background:transparent;
+      backdrop-filter: blur(50px);
+      transition: transform .5s ease, height .2s ease;
+    }
+    
+  
+    
+    .continuar{
+      font-size: 1rem;
+    }
+    
+
+    .ventanaformulario .styleform .registro {
+      font-size: 1.5rem;
+      padding: 4rem;
+      width: 100%;
+      height: -0.5rem;
+    }
+   .palabra{
+    padding-left:2.5rem;
+   }
+
+   .textoregistro .linkregistro {
+    padding-left: 0rem;
+  }
+
+  .estilofooter{
+    height: 25%
+  }
+
+}
+
+
+/* Estilos para tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px){
+   
+.botones{
+  padding: 5%;
+  margin-left: -1rem;
+  margin-right: -2rem;
+  margin-top: 19rem;
+}
+body{
+ font-size:20px;
+}
+
+
+.estilofooter{ 
+  height: 30%;
+  align-items: center;
+ 
+}
+.logosize {
+  height:10rem;
+  width: auto;
+  padding-left:90%;
+  }
+
+  .ventanaformulario{
+    position: absolute;
+    margin-left: 15rem;
+    margin-right: 2rem;
+    margin-top: -7rem;
+    width: auto;
+    height: 28rem;
+    display:flex;
+    font-size:3rem;
+  }
+  
+
+  .ventanaformulario .styleform {
+    font-size: 20px;
+    padding: 4rem;
+    width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size:1.5rem;
+  }
+  .ventanaformulario .styleform .registro{
+    font-size: 3rem;
+    padding: 4rem;
+    width: 100%;
+    height: -0.5rem;
+  }
+
+  .textologin{
+    margin-top: 10px;
+
+  }
+
+  .textologin .linklogin {
+    font-size:1rem;
+    padding-left: 0rem;
+  }
+
+  .textoregistro{
+    margin-top:10px;
+  }
+
+  .textoregistro .linkregistro {
+    padding-left: 0rem;
+  }
+  
+  .estilofooter{
+    height: 20%
+  }
+
+}
