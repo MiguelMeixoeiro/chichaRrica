@@ -37,14 +37,14 @@ header nav {
   padding: 1rem;
 }
 
-header .logo {
+/* header .logo {
   color: #595959;
   font-size: 1.5rem;
-}
+} */
 
 nav img {
   height: auto;
-  max-width: 10%;
+  max-width: 25%;
 }
 
 header ul {
@@ -114,6 +114,10 @@ header li a:hover {
   padding-bottom: 4%;
 }
 
+.logo{
+  height: 100px;
+  width:45em;
+}
 
 .hide-logo {
   transition: opacity 0.5s ease;

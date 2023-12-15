@@ -1,20 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
     const menuBtn = document.getElementById('menu__btn');
-    const menuIcon = document.querySelector('.menu__icon');
+    const menuIcon = document.querySelector('.menu__icon i');
     const navUl = document.querySelector('header nav ul');
     const sliderLateral = document.getElementById('sliderLateralContainer');
     const accesoLink = document.getElementById('sliderRojo');
-    const logoPrincipal = document.getElementById('logoPrincipal'); // Asegúrate de que la ID coincida
+    const logoPrincipal = document.getElementById('logoPrincipal'); 
     console.log(logoPrincipal);
     
     menuBtn.addEventListener('change', () => {
       if (menuBtn.checked) {
-        navUl.classList.add('show');
+          navUl.classList.add('show');
+          menuIcon.classList.remove('fa-bars');
+          menuIcon.classList.add('fa-times'); // Cambia el ícono a "x"
       } else {
-        navUl.classList.remove('show');
+          navUl.classList.remove('show');
+          menuIcon.classList.remove('fa-times');
+          menuIcon.classList.add('fa-bars'); // Restaura el ícono de hamburguesa
       }
-    });
-  
+  })
     // Cierra el menú cuando se hace clic en un enlace
     navUl.addEventListener('click', () => {
       menuBtn.checked = false;
@@ -25,11 +28,11 @@ document.addEventListener('DOMContentLoaded', function () {
     accesoLink.addEventListener('click', (event) => {
       event.preventDefault();
       sliderLateral.classList.toggle('show-slider');
-      if (logoPrincipal.style.opacity === '0') {
-        logoPrincipal.style.opacity = '1';
-      } else {
+      if (logoPrincipal.style.opacity === '' || logoPrincipal.style.opacity === '1') {
         logoPrincipal.style.opacity = '0';
+      } else {
+        logoPrincipal.style.opacity = '1';
       }
-        });
+    });
   });
   
