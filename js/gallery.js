@@ -1,5 +1,11 @@
 const URL = "http://localhost:3000/data"
-const fotos = document.querySelector(".gallery__fotos")
+const photos = document.querySelector(".gallery__fotos")
+const buttonCategory = document.querySelector(".gallery__buttonCategory")
+const containerSubCategory = document.querySelector(".gallery_filtersSubCategory")
+const buttonSubCategory = document.querySelector(".gallery__buttonSubCategory")
+
+
+//Muestra la API
 
 fetch(URL)
     .then(response => {
@@ -13,45 +19,52 @@ fetch(URL)
     .then(data => {
         const galeria = data.map(item =>{
 
-            const imagen = document.createElement("img");
-            let rutaImagen = item.url
-            imagen.src = rutaImagen
-            console.log(imagen.src);
-            return imagen;
+            const image = document.createElement("img");//añadimos un img para cada foto
+            let sourceImage = item.url //llamamos a la ruta de la imagen
+            image.src = sourceImage //esto lo hacemos para dejarlo mejor anidado
+            console.log(image.src);
+            return image;
 
         }) 
         
-        fotos.append(...galeria);
+        photos.append(...galeria);
         
     })
     .catch(error=> console.log('La hemos cagao'))
-
-
-
-
-    // const URL = "http://localhost:3000/data";
-    // const fotos = document.querySelector(".gallery__fotos");
     
-    // fetch(URL)
-    //     .then(response => {
-    //         if (!response.ok) {
-    //             throw new Error('La respuesta de red no fue satisfactoria');
-    //         }
-    //         return response.json();
-    //     })
-    //     .then(data => {
-    //         // Utiliza map para crear un array de imágenes
-    //         const imagenes = data.map(item => {
-    //             const imagen = document.createElement("img");
-    //             imagen.src = item.imagen;
-    //             return imagen;
-    //         });
+
+
+
+
+
+    //Botones filtros
+
+buttonCategory.addEventListener("click", function() {
+    console.log('category');
+
     
-    //         // Agrega las imágenes al contenedor
-    //         fotos.append(...imagenes);
-    //     })
-    //     .catch(error => {
-    //         console.error('Hubo un problema con la operación de obtención:', error);
-    //         // Puedes manejar el error de una manera específica si lo necesitas
-    //     });
+    if (buttonSubCategory.style.display === 'block') { //al hacer clic muestrame las categorias
+        buttonSubCategory.style.display = 'none'; //al hacer clic de nuevo desaparecen
+        hideAllButtons(containerSubCategory)
+
+    } else {
+        buttonSubCategory.style.display = 'block';
+        showAllButtons(containerSubCategory)
+    }
+});
+
+function hideAllButtons(container) { //funcion para esconder los botones
     
+    const buttons = container.querySelectorAll("button");
+    buttons.forEach(button => {
+        button.style.display = 'none';
+    });
+}
+
+function showAllButtons(container) { //funcion para mostrar todos los botones
+    
+    const buttons = container.querySelectorAll("button");
+    buttons.forEach(button => {
+        button.style.display = 'block';
+    });
+}
