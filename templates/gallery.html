@@ -9,14 +9,50 @@
     <title>Gallery</title>
 </head>
 <body>
+
     <!-- agregar header -->
     <main class="gallery__container">
-        <figure class="gallery__fotos">
-       
-        </figure>
+        <div class="gallery_filter">
+            <button class="gallery__buttonCategory">
+                <span class="btn-txt">CATEGORIAS</span>
+              </button>
+            <div class="gallery_filtersSubCategory">
+                <button class="gallery__buttonSubCategory">PERSONAS</button>
+                <button class="gallery__buttonSubCategory">NATURALEZA</button>
+                <button class="gallery__buttonSubCategory">EFECTOS</button>
+                <button class="gallery__buttonSubCategory">ARQUITECTURA URBANA</button>
+                <button class="gallery__buttonSubCategory">ANIMALES</button>
+            </div>
+        </div>
+        
+        <figure class="gallery__fotos"></figure>
+        
         
     </main>
+
+   <!-- Modal -->
+    <div id="myModal" class="modal">
+        <section class="modal__section">
+        <span class="close">&times;</span>
+        <img src="" id="modalImage" class="modal-content">
+        <div class="modal-info">
+        <h2 id="modalTitle"></h2>
+        <p id="modalPrice"></p>
+        </div>
+        <div class="pagination">
+        <span class="prev" onclick="showPrevImage()">&#10094;</span>
+        <span class="next" onclick="showNextImage()">&#10095;</span>
+        </div>
+        </section>
+    </div>
+  
     
+    <main class="gallery__container">
+        <div class="gallery_filter">
+    </div>
+    
+    <figure class="gallery__fotos"></figure>
+  </main>
 
     <script src="../js/gallery.js"></script>
 </body>
