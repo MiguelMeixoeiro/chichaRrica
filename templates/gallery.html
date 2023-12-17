@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" sizes="16x16 32x32 48x48" type="image/svg" href="./img/favicon.svg" />
     <title>Gallery</title>
 </head>
 <body>
+
     <!-- agregar header -->
     <main class="gallery__container">
         <div class="gallery_filter">
@@ -26,8 +28,32 @@
         
         <figure class="gallery__fotos"></figure>
         
+        
     </main>
+
+   <!-- Modal -->
+    <div id="myModal" class="modal">
+        <section class="modal__section">
+        <span class="close">&times;</span>
+        <img src="" id="modalImage" class="modal-content">
+        <div class="modal-info">
+        <h2 id="modalTitle"></h2>
+        <p id="modalPrice"></p>
+        </div>
+        <div class="pagination">
+        <span class="prev" onclick="showPrevImage()">&#10094;</span>
+        <span class="next" onclick="showNextImage()">&#10095;</span>
+        </div>
+        </section>
+    </div>
+  
     
+    <main class="gallery__container">
+        <div class="gallery_filter">
+    </div>
+    
+    <figure class="gallery__fotos"></figure>
+  </main>
 
     <script src="../js/gallery.js"></script>
 </body>
