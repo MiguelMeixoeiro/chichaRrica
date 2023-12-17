@@ -29,10 +29,10 @@ fetch(URL)
             // Añade un atributo personalizado para almacenar el precio en el elemento de imagen
             image.dataset.price = item.price;
 
-  // Agrega un manejador de clic al elemento de imagen para mostrar el modal
-  image.addEventListener("click", function() {
-    showModal(item);
-});
+            // Agrega un manejador de clic al elemento de imagen para mostrar el modal
+        image.addEventListener("click", function() {
+        showModal(item);
+        });
 
             return image;
 

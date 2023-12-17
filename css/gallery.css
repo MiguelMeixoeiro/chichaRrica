@@ -118,14 +118,26 @@ img{
   }
   
   .modal-content {
-    margin: auto;
-    display: block;
-    max-width: 80%;
-    max-height: 80%;
-  }
-  .modal__section{
+    display: flex;
+    max-width: 45vw;
+    /* max-height: 80%; */
+}
+.modal__section{
     display:flex;
     
+}
+
+#modalTitle {
+    font-family: 'raleway', Helvetica, sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+
+  #modalPrice {
+    font-family: 'raleway', Helvetica, sans-serif;
+    font-size: 18px;
+    color: #ffd700;
   }
 
   .modal-info{
