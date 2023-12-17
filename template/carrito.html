@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="icon" sizes="16x16 32x32 48x48" type="image/svg" href="./img/favicon.svg" />
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <title>Carrito de la Compra</title>
+</head>
+<body class="no-scroll">
+  <header id="main-header">
+    <div class="menu__icon">
+      <i class="fas fa-bars icon"></i>
+    </div>
+ 
+    <!-- Burger Menú -->
+    <input class="menu__btn" type="checkbox" id="menu__btn" />
+    <label class="menu__icon" for="menu__btn"><span class="navicon"></span></label>  
+    <!-- Menú -->
+    <nav>
+      <img id="logoPrincipal" src="./img/logoBlanco.svg" alt="Logotipo Miguel Meixoeiro" class="hide-logo">
+      
+      <ul>
+        <li><a href="#acceso" id="sliderRojo" class="toggle-logo">CONTACTO</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#galeria">GALERIA</a></li>
+        <li><a href="#contacto">ACCESO</a></li>
+        <li><a href="#carrito"><i class="fas fa-shopping-cart icon"></i></a></li>
+      </ul> 
+    </nav>
+  </header>
+
+  <main class="hero fs">
+    <div  class="bg heroBig"></div>
+    <!-- slide rojo que aparece cuando clickamos en ACCESO -->
+    <section class="sliderLateral" id="sliderLateralContainer">
+      <img src="./img/logoBlanco.svg" alt="Logotipo Miguel Meixoeiro" class="logoSlideBlanco">
+    </section>
+    <!-- Contenido principal, incluyendo la imagen de fondo -->
+  </main>
+
+  <!-- Contenedor añadido -->
+  <div class="carrito-container">
+    <h1>Carrito de la Compra</h1>
+    <div class="rectangulo"></div>
+    <div class="rectangulo"></div>
+  </div>
+
+  <!-- <footer>
+    <img src="./img/logoPlanoBlanco.svg" alt="Logotipo Miguel Meixoeiro">
+  </footer> -->
+  <script src="./js/scripJS.js"></script>
+  <script src="data.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  background-color: #262626;
+  /* background-image: url(../img/foto1.jpg); */
+  background-size: cover;/
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+#main-header {
+  margin: 0px 40px 0;
+  position: relative;
+  z-index: 999999;
+}
+
+/* menu hamburguesa */
+
+.menu, .menu__btn{
+  display:none;
+  color: #D9D9D9;
+}
+
+.menu__icon i{
+  display:none;
+  color: #D9D9D9;
+}
+
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+header .logo {
+  color: #D9D9D9;
+  font-size: 1.5rem;
+}
+
+nav img {
+  height: auto;
+  max-width: 10%;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  font-size: 1.4em;
+}
+
+header li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+}
+/* Agrega este bloque al final de tu archivo de estilo CSS */
+.carrito-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px; /* Ajusta la distancia superior según sea necesario */
+}
+
+.carrito-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.rectangulo {
+  width: 500px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #D9D9D9;
+  filter: blur(.5px);
+  margin-bottom: 40px; /* Ajusta la separación entre los rectángulos según sea necesario */
+}
+
+
+header li a:hover {
+  color: #f20519;
+  font-weight: 800;
+}
+
+.hero.fs {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+
+
+.bg {
+  background-size: cover;
+  background-position: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.sliderLateral {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: -300px; /* Inicialmente oculto fuera de la pantalla */
+  width: 300px; /* Ancho de la sección lateral */
+  height: 100vh;
+  background-color: #8c030395;
+  transition: left 0.5s ease; /* Añadimos transición */
+}
+
+.show-slider {
+  left: 0; /* Muestra la sección al cambiar la posición izquierda a 0 */
+}
+
+.logoSlideBlanco {
+  max-height: 26%;
+  margin-top: 9%;
+}
+
+
+.hide-logo {
+  transition: opacity 0.5s ease;
+  opacity: 1;
+  pointer-events: none;
+}
+
+footer {
+  /* background: #fff; */
+  text-align: center;
+  margin: 1% -1%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+footer img {
+  height: 40px;
+}
+
+/* Estilos para pantallas pequeñas (menos de 840px) */
+
+
+@media only screen and (max-width: 840px) {
+
+
+  header nav ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #262626ed;
+    opacity: 0; /* Inicialmente oculto */
+    max-height: 0; /* Inicialmente sin altura */
+    overflow: hidden;
+    transition: opacity 0.1s ease, max-height 0.3s ease; /* Añadimos transiciones */
+  }
+
+  header nav ul.show {
+    display: flex;
+    flex-direction: column;
+    width: 79vw;
+    top: 72px;
+    opacity: 1; /* Mostrar gradualmente */
+    max-height: 600px; /* Ajusta a la altura máxima que desees */
+  }
+
+  header nav ul li {
+    padding: 15px;
+    text-align: center;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 1s ease; /* Añadimos transición */
+  }
+
+  header nav ul.show li {
+    opacity: 1; /* Mostrar gradualmente */
+  }
+
+  /* Otros estilos para el menú hamburguesa */
+  .menu__icon {
+    cursor: pointer;
+    padding: 25px 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    user-select: none;
+    z-index: 5;
+    display: block;
+  }
+
+  .menu__icon i {
+    display: block;
+    font-size: 24px;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+  }
+
+  /* Ajustamos el tamaño y color cuando el menú está activado */
+  .menu__btn:checked ~ .menu__icon i {
+    color: #f20519;
+    transform: rotate(90deg);
+  }
+
+  .menu__btn {
+    display: none;
+  }
+}
+
