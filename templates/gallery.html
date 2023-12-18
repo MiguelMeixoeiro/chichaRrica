@@ -10,34 +10,13 @@
     <title>Gallery</title>
 </head>
 <body>
-    <header id="main-header">
-        <div class="menu__icon">
-          <i class="fas fa-bars icon"></i>
-        </div>
-     
-        <!--Burger Menú-->
-        <input class="menu__btn" type="checkbox" id="menu__btn" />
-        <label class="menu__icon" for="menu__btn"><span class="navicon"></span> </label>  
-        <!--Menú-->
-    
-        <nav>
-          <a href="index.html" class="nav__logo logo">
-          <img id="logoPrincipal" src="../img/iconos/logoLetraBlanca.svg" alt="Logotipo Miguel Meixoeiro" class="hide-logo">
-          </a>
-          <ul>
-            <li><a href="#contacto" id="sliderRojo" class="toggle-logo">CONTACTO</a></li>
-            <li><a href="./templates/about.html">ABOUT</a></li>
-            <li><a href="./templates/gallery.html">GALERIA</a></li>
-            <li><a href="#acceso">ACCESO</a></li>
-          </ul>
-        </nav>
-      </header>
+
     <!-- agregar header -->
     <main class="gallery__container">
         <div class="gallery_filter">
             <button class="gallery__buttonCategory">
                 <span class="btn-txt">CATEGORIAS</span>
-              </button>
+            </button>
             <div class="gallery_filtersSubCategory">
                 <button class="gallery__buttonSubCategory">PERSONAS</button>
                 <button class="gallery__buttonSubCategory">NATURALEZA</button>
@@ -57,20 +36,20 @@
                 <span class="prev">&#10094;</span>
                 <span class="next">&#10095;</span>
             </div>
-            <section class="modal__section no-scroll">
+            <section class="modal__section">
                 <span class="close">&times;</span>
+
                 <div class="modal-info">
                     <img src="" id="modalImage" class="modal-content">
                     <section class="modal__info-justify">
                         <h2 id="modalTitle"></h2>
                         <p id="modalPrice"></p>
-                        <div class="center">
-                        <button class="button" id="addToCart__button">AÑADIR</button>
                     </section>
                     <div class="center">
                     <button class="button" id="addToCart__button">AÑADIR</button>
                   </div>
                 </div>
+                
             </section>
         </div>
     </main>

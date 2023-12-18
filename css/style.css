@@ -29,6 +29,7 @@ body {
   display:none;
 }
 
+
 header nav {
   display: flex;
   justify-content: space-between;
@@ -247,6 +248,7 @@ header li a:hover {
 .redes--formato{
   min-height: 8%;
 }
+
 
 
 /* FOOTER */
