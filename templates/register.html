@@ -87,19 +87,31 @@
         </div>  
         <div class="form-group">
           <label>            
-            <button class="botons" type="submit" onclick="mostrarModal()">Registro</button>
+            <button class="button" type="submit" onclick="mostrarModal()">Registro</button>
           </label>
         </div>
         <div class="form-group"></div>
         <label>
           <button type="button"><a class="button" href="../templates/login.html">Iniciar Sesión</button></a>
         </label>
+
+        <!-- Grupo: Terminos y Condiciones -->
+			<div class="formulario__grupo" id="grupo__terminos">
+				<label class="formulario__label">
+					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+					Acepto los Terminos y Condiciones
+				</label>
+			</div>
+
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div>
       </form>
     </section>
   </main>
 
   <!-- Agrega esto después de tu formulario -->
-  <div id="myModal" class="modal">
+  <div class="formulario__grupo formulario__grupo-btn-enviar">
     <div class="modal-content">
       <span class="close" onclick="cerrarModal()">&times;</span>
       <p>¡Muchas gracias por registrarse!</p>
@@ -121,7 +133,7 @@
   </main>
 
   <footer>
-    <img src="../img/logoPlanoBlanco.svg" alt="Logotipo Miguel Meixoeiro">
+    
   </footer>
   <script src="../js/register.js"></script>
 </body>
