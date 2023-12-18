@@ -119,8 +119,14 @@ img{
   
   .modal-content {
     display: flex;
+<<<<<<< HEAD
     max-width: 45vw;
     /* max-height: 80%; */
+=======
+    max-width: 43vw;
+    /* max-height: 80%; */
+    margin-left: 3%;
+>>>>>>> developer
 }
 .modal__section{
     display:flex;
@@ -144,6 +150,14 @@ img{
     display:flex;
     color: #fff;
   }
+  .modal__info-justify {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: flex-end;
+    min-width: 74%;
+}
   
   .close {
     position: absolute;
