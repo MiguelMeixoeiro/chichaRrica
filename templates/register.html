@@ -87,7 +87,7 @@
         </div>  
         <div class="form-group">
           <label>            
-            <button class="botons" type="submit" >Registro</button>
+            <button class="botons" type="submit" onclick="mostrarModal()">Registro</button>
           </label>
         </div>
         <div class="form-group"></div>
@@ -97,6 +97,26 @@
       </form>
     </section>
   </main>
+
+  <!-- Agrega esto después de tu formulario -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <p>¡Muchas gracias por registrarse!</p>
+    </div>
+  </div>
+
+  <script>
+    function mostrarModal() {
+      var modal = document.getElementById('myModal');
+      modal.style.display = 'block';
+    }
+
+    function cerrarModal() {
+      var modal = document.getElementById('myModal');
+      modal.style.display = 'none';
+    }
+  </script>
 
   </main>
 
