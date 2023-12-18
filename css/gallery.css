@@ -119,14 +119,9 @@ img{
   
   .modal-content {
     display: flex;
-<<<<<<< HEAD
-    max-width: 45vw;
-    /* max-height: 80%; */
-=======
     max-width: 43vw;
     /* max-height: 80%; */
     margin-left: 3%;
->>>>>>> developer
 }
 .modal__section{
     display:flex;
