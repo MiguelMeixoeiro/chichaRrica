@@ -111,10 +111,11 @@
   </main>
 
   <!-- Agrega esto después de tu formulario -->
-  <div class="formulario__grupo formulario__grupo-btn-enviar">
+  <div id="myModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="cerrarModal()">&times;</span>
       <p>¡Muchas gracias por registrarse!</p>
+      <a href="../templates/gallery.html"><button onclick="galeria()">Galeria</button></a>
     </div>
   </div>
 
@@ -128,7 +129,13 @@
       var modal = document.getElementById('myModal');
       modal.style.display = 'none';
     }
+
+    function galeria() {
+      window.location.href = "index.html"; // Reemplaza "index.html" con la URL de tu página de inicio
+    }
+
   </script>
+
 
   </main>
 
