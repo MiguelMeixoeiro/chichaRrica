@@ -84,18 +84,8 @@
             <input class="control" id="password" name="password" type="password" placeholder="Contraseña" required> 
           </label>
           <span id="errorPassword" class="error"></span>
-        </div>  
-        <div class="form-group">
-          <label>            
-            <button class="button" type="submit" onclick="mostrarModal()">Registro</button>
-          </label>
         </div>
-        <div class="form-group"></div>
-        <label>
-          <button type="button"><a class="button" href="../templates/login.html">Iniciar Sesión</button></a>
-        </label>
-
-        <!-- Grupo: Terminos y Condiciones -->
+<!-- Grupo: Terminos y Condiciones -->
 			<div class="formulario__grupo" id="grupo__terminos">
 				<label class="formulario__label">
 					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
@@ -105,7 +95,17 @@
 
 			<div class="formulario__mensaje" id="formulario__mensaje">
 				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
-			</div>
+			</div>  
+        <div class="form-group">
+          <label>            
+            <button id="boton" class="button" type="submit" onclick="mostrarModal()">Registro</button>
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            <button id="boton" class="button" type="button"><a href="../templates/login.html">Iniciar Sesión</button></a>
+          </label>
+        </div>
       </form>
     </section>
   </main>
