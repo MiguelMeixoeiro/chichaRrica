@@ -22,6 +22,7 @@ fetch(URL)
   })
   .then((responseData) => {
     data = responseData;
+
     const galeria = data.map((item) => {
       const image = document.createElement("img");
       let sourceImage = item.url;
@@ -33,7 +34,21 @@ fetch(URL)
       });
 
       return image;
-    });
+    })
+    })
+
+    .then(data => {
+
+        const galeria = data.map(item =>{
+
+
+
+            const image = document.createElement("img");//añadimos un img para cada foto
+            let sourceImage = item.url //llamamos a la ruta de la imagen
+            image.src = sourceImage //esto lo hacemos para dejarlo mejor anidado
+            // console.log(image.src);
+            return image;
+        })
 
     photos.append(...galeria);
   })
@@ -60,6 +75,7 @@ photos.addEventListener("click", function (event) {
   if (event.target.tagName === "IMG") {
     modal.style.display = "block";
     modalImage.src = event.target.src;
+  }
 
     const dataIndex = Array.from(event.target.parentNode.children).indexOf(event.target);
     const selectedData = data[dataIndex];
@@ -67,7 +83,45 @@ photos.addEventListener("click", function (event) {
     modalTitle.innerHTML = `<h2>${selectedData.title}</h2>`;
     modalPrice.innerHTML = `<p>${selectedData.price}</p>`;
     currentIndex = dataIndex;
-  }
+  })
+//Funcion para mostrar todas las imagenes
+    function showAllImages(images) { 
+
+        photos.innerHTML = ''
+
+        images.forEach(item => {
+           
+            const imgElement = document.createElement('img');  // Crea un elemento img
+                        
+            imgElement.src = item.url;//coge la ruta de la imagen
+        
+            photos.appendChild(imgElement);// Añade la imagen como hijo de gallery__fotos
+        })
+        
+      }
+    
+
+
+//Botones filtros categorías -----------------------------------------------------------
+
+buttonCategory.addEventListener("click", function() {
+    // console.log('category');
+
+    
+    if (buttonSubCategory.style.display === 'block') { //al hacer clic muestrame las categorias
+        buttonSubCategory.style.display = 'none'; //al hacer clic de nuevo desaparecen
+        hideAllButtons(containerSubCategory)
+
+        fetch(URL)
+            .then(response => response.json())
+            .then(data => showAllImages(data))
+            .catch(error => console.error('Houston tenemos un problema', error))
+        
+
+    } else {
+        buttonSubCategory.style.display = 'block';
+        showAllButtons(containerSubCategory)
+    }
 });
 
 // Manejador de clic en el botón de cierre
@@ -151,6 +205,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
    
+
+//Ajustar altura de forma automatica----------------------------------------------------------------------------
+ 
+// Guarda la altura original al cargar la página
+const alturaOriginal = document.querySelector('.gallery__fotos').offsetHeight;
+
+// Función para ajustar la altura de las imágenes
+function ajustarAltura() {
+    const galeria = document.querySelector('.gallery__fotos');
+    
+    // Lógica para ajustar la altura según la subcategoría o filtro aplicado
+    // Puedes adaptar esto según cómo obtienes y aplicas los datos de la API
+    // Aquí un ejemplo básico:
+    const subcategoriaSeleccionada = obtenerSubcategoriaSeleccionada(); // Implementa esta función
+    
+    if (subcategoriaSeleccionada) {
+        // Lógica para ajustar la altura según la subcategoría
+        galeria.style.columnCount = 2; // o el número que desees para la subcategoría
+    } else {
+        // Restablece a la altura original si no hay filtro
+        galeria.style.columnCount = 'auto';
+    }
+}
+
+// Llama a la función al cargar la página y cuando se aplique el filtro
+document.addEventListener('DOMContentLoaded', ajustarAltura);
+document.addEventListener('cambioFiltro', ajustarAltura); // Escucha un evento personalizado o ajusta según cómo aplicas los filtros
+
+  
+
+
+
+
 //Chuleta para mostrar los objetos del Array
  // for(let i=0; i < data.length; i++) { //recorre el array
             // //    console.log(data[i].keyword)
