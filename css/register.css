@@ -9,9 +9,17 @@ body {
     justify-content: center;
 }
 
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  
 .logoPrincipal {
-    width: auto;
-    height: 50vh;
+    height: auto;
+    max-width: 55%;
 }
 
 
