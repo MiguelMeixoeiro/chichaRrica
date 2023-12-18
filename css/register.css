@@ -33,20 +33,18 @@ h4{
     color: #000000;
 }
 
-.formulario{
-    display: inline-block;
+.formulario {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
     color: #000000;
     background-color: #8c8c8c;
     border: 1px solid #474343;
-    padding: 40px;
+    margin-top: 5%;
+    padding: 30px 40px 75px 40px;
     border-radius: 10px;
-    /* max-width: 400px; */
     height: 45vh;
-    
-    margin: 90px;
-
 }
 
 
@@ -72,6 +70,8 @@ h4{
 .form-group{
     margin: 13px;
     text-align: center;
+    display: flex;
+    justify-content: center;
         
 }
 
@@ -159,7 +159,6 @@ img .logo-user{
 .form-group a{
     text-decoration: none;
     color: #b90909;
-    
 }
 
 /* Media query para pantallas más pequeñas */
