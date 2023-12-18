@@ -40,7 +40,7 @@ body{
 
 
 
-.gallery__buttonCategory::after{
+/* .gallery__buttonCategory::after{ */
     /* content: "";
     position: absolute;
     left: 0;
@@ -52,7 +52,7 @@ body{
     height: 10px;
     width: 10px;
     z-index: -1; */
-}
+/* } */
 
 .gallery__buttonCategory:hover{
     font-weight: bolder;
@@ -119,8 +119,10 @@ img{
   
   .modal-content {
     display: flex;
+    max-width: 45vw;
+    max-height: 80%;
     max-width: 43vw;
-    /* max-height: 80%; */
+    max-height: 80%;
     margin-left: 3%;
 }
 .modal__section{
