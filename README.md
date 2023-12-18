@@ -1,10 +1,8 @@
 
 
-<div style="text-align:center">
+<div align="center">
   <img src="./img/iconos/logo3.svg" alt="Texto Alternativo">
 </div>
-
-
 
 
 # Proyecto de Fotografía Miguel Meixoeiro 📸
