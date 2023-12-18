@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/gallery.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" sizes="16x16 32x32 48x48" type="image/svg" href="./img/favicon.svg" />
     <title>Gallery</title>
 </head>
@@ -35,17 +35,19 @@
     <!-- agregar header -->
     <main class="gallery__container">
         <div class="gallery_filter">
-            <button class="gallery__buttonCategory button ">
-                <span class="center">CATEGORIAS</span>
-            </button>
-            <div class="gallery_filtersSubCategory gallery__barra">
-                <button class="gallery__buttonSubCategory button_barra-acople">PERSONAS</button>
+            <button class="gallery__buttonCategory">
+                <span class="btn-txt">CATEGORIAS</span>
+              </button>
+            <div class="gallery_filtersSubCategory">
+                <button class="gallery__buttonSubCategory">PERSONAS</button>
                 <button class="gallery__buttonSubCategory">NATURALEZA</button>
                 <button class="gallery__buttonSubCategory">EFECTOS</button>
                 <button class="gallery__buttonSubCategory">ARQUITECTURA URBANA</button>
                 <button class="gallery__buttonSubCategory">ANIMALES</button>
             </div>
         </div>
+        
+        <figure class="gallery__fotos"></figure>
         
         <figure class="gallery__fotos"></figure>
         
@@ -65,6 +67,8 @@
                         <div class="center">
                         <button class="button" id="addToCart__button">AÑADIR</button>
                     </section>
+                    <div class="center">
+                    <button class="button" id="addToCart__button">AÑADIR</button>
                   </div>
                 </div>
             </section>

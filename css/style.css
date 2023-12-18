@@ -97,10 +97,7 @@ header li a:hover {
   width: 400px;
   height: 100vh;
   background-color: #8c030395;
-  transition: left 0.5s ease;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-evenly;
+  transition: left 0.5s ease; /* Añadimos transición */
 }
 
 .show-slider {

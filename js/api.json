@@ -91,7 +91,7 @@
   {
     "id": "012",
     "title": "Craneo",
-    "url": "../img/imagen012.jpgw",
+    "url": "../img/imagen012.jpg",
     "keyword": "personas",
     "price": "10€",
     "copyright": "Foto de Ahmed Adly en Unsplash"
@@ -171,7 +171,7 @@
   {
     "id": "022",
     "title": "Cielo",
-    "url": "../img/imagen022.jpgA",
+    "url": "../img/imagen022.jpg",
     "keyword": "naturaleza",
     "price": "10€",
     "copyright": "Foto de Daniel Adesina en Unplash"
@@ -203,7 +203,7 @@
   {
     "id": "026",
     "title": "Escalera roja",
-    "url": "../img/imagen026.jpg4",
+    "url": "../img/imagen026.jpg",
     "keyword": "arquitectura urbana",
     "price": "10€",
     "copyright": "Foto de Sergio Capuzzimati en Unsplash"
