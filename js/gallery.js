@@ -10,7 +10,7 @@ const buttonSubCategory = document.querySelector(".gallery__buttonSubCategory")
 fetch(URL)
     .then(response => {
         if (!response.ok){
-            throw new Error('algo esta pasandoo')
+            throw new Error('Algo esta pasandoo')
         }      
         return response.json()
     })
@@ -19,19 +19,22 @@ fetch(URL)
     .then(data => {
         const galeria = data.map(item =>{
 
+
+
             const image = document.createElement("img");//añadimos un img para cada foto
             let sourceImage = item.url //llamamos a la ruta de la imagen
             image.src = sourceImage //esto lo hacemos para dejarlo mejor anidado
             // console.log(image.src);
             return image;
 
+
         }) 
-        
+        console.log(data[1].price);
         photos.append(...galeria);
         
     })
     .catch(error=> console.log('La hemos cagao'))
-    
+
 
 //Funcion para mostrar todas las imagenes
     function showAllImages(images) { 
