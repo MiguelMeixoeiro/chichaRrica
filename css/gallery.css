@@ -2,7 +2,6 @@ body{
     overflow-x: hidden;
     margin: 0;
     overflow-y: auto;
-
     background-color: #262726;
 }
 
@@ -16,6 +15,37 @@ body{
     margin-top: 50px;
 }
 
+
+.button__categories {
+  margin-top: 10px;
+  font-family: 'raleway', Helvetica, sans-serif;
+  font-size: 17px;
+  background: #8c0303;
+  color: #d9d9d9;
+  padding: 0.7em 5.5em;
+  display: flex;
+  align-items: center;
+  border: 2px solid #66da4300;
+  border-radius: 5em;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.button__categories:hover {
+  border: 2px solid #d9d9d9;
+  background: #00000000;
+  color: #fff;
+}
+
+.button__categories:active {
+  border: 2px solid #66da4300;
+  background: #f20519;
+  color: black;
+}
+.button_barra-acople{
+  padding: 0 !important;
+}
 .gallery__buttonCategory{
     background-color: #262726;
     color: white;
@@ -40,7 +70,7 @@ body{
 
 
 
-.gallery__buttonCategory::after{
+/* .gallery__buttonCategory::after{ */
     /* content: "";
     position: absolute;
     left: 0;
@@ -52,7 +82,7 @@ body{
     height: 10px;
     width: 10px;
     z-index: -1; */
-}
+/* } */
 
 .gallery__buttonCategory:hover{
     font-weight: bolder;
@@ -74,13 +104,18 @@ body{
 }
 
 .gallery__buttonSubCategory{
-    background-color: #262726;
+    background-color: #8c0303;
     color: white;
-    border: white solid 0.5px;
+    /* border: white solid 0.5px; */
     font-size: 0.8em;
-
     display: none;
-    
+}
+
+.gallery__barra {
+  background-color: #8c0303;
+  color: #f1f1f1;
+  padding: 1% 5%;
+  border-radius: 45px;
 }
 
 /*Galería imágenes*/
@@ -117,15 +152,16 @@ img{
     background-color: rgba(0,0,0,0.9);
   }
   
-  .modal-content {
+  /* .modal-content {
     display: flex;
     max-width: 43vw;
-    /* max-height: 80%; */
-    margin-left: 3%;
-}
-.modal__section{
-    display:flex;
-    
+    max-height: 80%;
+    margin-left: 3%;} */
+
+
+.modal__section {
+  display: flex;
+  max-height: 75%;
 }
 
 #modalTitle {
@@ -141,18 +177,19 @@ img{
     color: #ffd700;
   }
 
-  .modal-info{
-    display:flex;
-    color: #fff;
-  }
-  .modal__info-justify {
+ .modal-info {
     display: flex;
-    justify-content: flex-end;
+    color: #fff;
+    justify-content: space-evenly;
+}
+  /* .modal__info-justify {
+    display: flex;
+    justify-content: flex-start;
     flex-direction: column;
     align-content: stretch;
     align-items: flex-end;
     min-width: 74%;
-}
+} */
   
   .close {
     position: absolute;
