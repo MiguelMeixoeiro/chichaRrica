@@ -22,7 +22,7 @@
   <!--Menú-->
 
     <nav>
-      <a href="index.html" class="nav__logo logo">
+      <a href="../index.html" class="nav__logo logo">
       <img id="logoPrincipal" src="../img/iconos/logoBlanco.svg" alt="Logotipo Miguel Meixoeiro" class="hide-logo">
       </a>
       <ul>
@@ -103,6 +103,7 @@
     <div class="modal-content">
       <span class="close" onclick="cerrarModal()">&times;</span>
       <p>¡Muchas gracias por registrarse!</p>
+      <a href="../templates/gallery.html"><button onclick="galeria()">Galeria</button></a>
     </div>
   </div>
 
@@ -116,6 +117,11 @@
       var modal = document.getElementById('myModal');
       modal.style.display = 'none';
     }
+
+    function galeria() {
+      window.location.href = "index.html"; // Reemplaza "index.html" con la URL de tu página de inicio
+    }
+
   </script>
 
   </main>
