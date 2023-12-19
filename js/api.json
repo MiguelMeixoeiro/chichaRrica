@@ -4,7 +4,7 @@
     "id": "001",
     "title": "Foto Hombre",
     "url": "../img/imagen001.jpg",
-    "keyword": "persona, efectos",
+    "keyword": "personas, efectos",
     "price": "10€",
     "copyright": "Foto de Chase Fade en Unsplash"
   },
@@ -142,13 +142,13 @@
     "url": "../img/imagen018.jpg",
     "keyword": "animales",
     "price": "10€",
-    "copyright": "Foto de Mathis Jrdl"
+    "copyright": "Foto de Nick Fewings"
   },
   {
     "id": "019",
     "title": "Mano",
     "url": "../img/imagen019.jpg",
-    "keyword": "personas, efectos",
+    "keyword":"personas, efectos",
     "price": "10€",
     "copyright": "Foto de The Dark Queen"
   },
