@@ -22,7 +22,7 @@
   <!--Menú-->
 
   <nav>
-    <a href="index.html" class="nav__logo logo">
+    <a href="../index.html" class="nav__logo logo">
     <img id="logoPrincipal" src="../img/iconos/logoBlanco.svg" alt="Logotipo Miguel Meixoeiro" class="hide-logo">
     </a>
     <ul>
@@ -68,31 +68,34 @@
         <form action="#" method="post">                 
             <div class="form-group">
             <label>
-                <input class="control" id="email" name="email" placeholder="Correo" required>
+                <input class="control" id="email" name="email" placeholder="Correo" required autocomplete="off">
             </label>
             </div>
             <div class="form-group">
             <label>
-                <input class="control" id="password" name="password" type="password" placeholder="Contraseña" required> 
+                <input class="control" id="password" name="password" type="password" placeholder="Contraseña" required autocomplete="off"> 
             </label>
             <span id="errorPassword" class="error"></span>
             </div>  
+
+          <section class="botons" >
             <div class="form-group">
-            <label>            
-                <input class="botons" type="submit" value="Iniciar">
-            </label>
+              <label>            
+                  <input class="button" type="submit" value="Iniciar">
+              </label>
             </div>
-        
-            <div class="form-group"></div>
-            <label>
-            <a href="register.html" target="_self"><p>Crear Cuenta</p></a>
-            </label>
+            <div class="form-group">
+              <label>
+                <a class="button" href="register.html" target="_self"><p>Crear Cuenta</p></a>
+              </label>
+            </div>
+          </section>
         </form>
         </section>
     </main>
 
   <footer>
-    <img src="../img/" alt="Logotipo Miguel Meixoeiro">
+    <img src="../img/iconos/logoPlanoBlanco.svg" alt="Logotipo Miguel Meixoeiro">
   </footer>
   <script src="./js/scripJS.js"></script>
   <script src="../js/login.js"></script>

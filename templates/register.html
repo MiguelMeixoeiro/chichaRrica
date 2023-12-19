@@ -22,7 +22,7 @@
   <!--Menú-->
 
     <nav>
-      <a href="index.html" class="nav__logo logo">
+      <a href="../index.html" class="nav__logo logo">
       <img id="logoPrincipal" src="../img/iconos/logoBlanco.svg" alt="Logotipo Miguel Meixoeiro" class="hide-logo">
       </a>
       <ul>
@@ -69,43 +69,35 @@
       <form action="#" method="post">                 
         <div class="form-group">
           <label>
-            <input class="control" id="nombre" name="nombre" placeholder="Nombre" required>
+            <input class="control" id="nombre" name="nombre" placeholder="Nombre" required autocomplete="off">
           </label>
           <span id="errorNombre" class="error"></span>
         </div>               
         <div class="form-group">
           <label>
-            <input class="control" id="email" name="email" placeholder="Correo" required>
+            <input class="control" id="email" name="email" placeholder="Correo" required autocomplete="off">
           </label>
           <span id="errorEmail" class="error"></span>
         </div>
         <div class="form-group">
           <label>
-            <input class="control" id="password" name="password" type="password" placeholder="Contraseña" required> 
+            <input class="control" id="password" name="password" type="password" placeholder="Contraseña" required autocomplete="off"> 
           </label>
           <span id="errorPassword" class="error"></span>
-        </div>
-<!-- Grupo: Terminos y Condiciones -->
-			<div class="formulario__grupo" id="grupo__terminos">
-				<label class="formulario__label">
-					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
-					Acepto los Terminos y Condiciones
-				</label>
-			</div>
+        </div>  
 
-			<div class="formulario__mensaje" id="formulario__mensaje">
-				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
-			</div>  
+      <section class="botons">
         <div class="form-group">
           <label>            
-            <button id="boton" class="button" type="submit" onclick="mostrarModal()">Registro</button>
+            <button class="button" type="submit" onclick="mostrarModal()">Registro</button>
           </label>
         </div>
         <div class="form-group">
           <label>
-            <button id="boton" class="button" type="button"><a href="../templates/login.html">Iniciar Sesión</button></a>
+            <a class="button" href="login.html" target="_self" >Iniciar Sesión</a>
           </label>
         </div>
+      </section>
       </form>
     </section>
   </main>
@@ -140,7 +132,7 @@
   </main>
 
   <footer>
-    
+    <img src="../img/iconos/logoPlanoBlanco.svg" alt="Logotipo Miguel Meixoeiro">
   </footer>
   <script src="../js/register.js"></script>
 </body>
