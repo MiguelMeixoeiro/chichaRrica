@@ -1,62 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/gallery.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" sizes="16x16 32x32 48x48" type="image/svg" href="../img/iconos/favicon.svg" />
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" type="image/svg" href=".../img/iconos/iconos/favicon.svg" />
     <title>Gallery</title>
 </head>
+
 <body>
-    <!--Header-->
     <header id="main-header">
         <div class="menu__icon">
-          <i class="fas fa-bars icon burger"></i>
+            <i class="fas fa-bars icon"></i>
         </div>
-     
-      <!--Burger Menú-->
-      <input class="menu__btn" type="checkbox" id="menu__btn" />
-      <label class="menu__icon" for="menu__btn"><span class="navicon"></span></label>  
-      <!--Menú-->
-    
+
+        <!--Burger Menú-->
+        <input class="menu__btn" type="checkbox" id="menu__btn" />
+        <label class="menu__icon" for="menu__btn"><span class="navicon"></span> </label>
+        <!--Menú-->
+
         <nav>
-            <img href="../index.html" id="logoPrincipal" src="../img/iconos/logo1.svg" alt="Logotipo Miguel Meixoeiro" class="hide-logo nav__img-tamaño">
-          <ul>
-            <li><a href="../templates/login.html">ACCESO</a></li>
-            <li><a href="../templates/about.html">ABOUT</a></li>
-            <li><a href="../templates/gallery.html">GALERIA</a></li>
-            
-          </ul>
+            <a href="../index.html" class="nav__logo logo">
+                <img id="logoPrincipal" src="../img/iconos/logo1.svg" alt="Logotipo Miguel Meixoeiro"
+                    class="hide-logo nav__img-tamaño">
+            </a>
+            <ul>
+                <li><a href="./login.html">ACCESO</a></li>
+                <li><a href="./gallery.html">GALERIA</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+            </ul>
         </nav>
-      </header>
-
-
-
+    </header>
 
     <!-- Galeria -->
     <main class="gallery__container">
         <div class="gallery_filter">
-
-            <button class="gallery__buttonCategory">CATEGORIAS</button>            
-            
+            <a class="gallery__buttonCategory button">
+                <span class="btn-txt">CATEGORIAS</span>
+            </a>
             <div class="gallery_filtersSubCategory">
-                <button class="gallery__buttonSubCategory buttonSubCategory" data-keyword="personas">PERSONAS</button>
+                <button class="gallery__buttonSubCategory buttonSubCategory" data-keyword="personas"><a href="#">PERSONAS</a></button>
 
-                <button class="gallery__buttonSubCategory buttonSubCategory" data-keyword="naturaleza">NATURALEZA</button>
+                <button class="gallery__buttonSubCategory buttonSubCategory"
+                    data-keyword="naturaleza"><a href="#">NATURALEZA</a></button>
 
-                <button class="gallery__buttonSubCategory buttonSubCategory" data-keyword="efectos">EFECTOS</button>
+                <button class="gallery__buttonSubCategory buttonSubCategory" data-keyword="efectos"><a href="#">EFECTOS</a></button>
 
-                <button class="gallery__buttonSubCategory buttonSubCategory" data-keyword="arquitectura urbana">ARQUITECTURA URBANA</button>
+                <button class="gallery__buttonSubCategory buttonSubCategory"
+                    data-keyword="arquitectura urbana"><a href="#">ARQUITECTURA URBANA</a></button>
 
-                <button class="gallery__buttonSubCategory buttonSubCategory" data-keyword="animales">ANIMALES</button>
+                <button class="gallery__buttonSubCategory buttonSubCategory" data-keyword="animales"><a href="#">ANIMALES</a></button>
+                <button class="gallery__buttonSubCategory buttonSubCategory" data-keyword="animales"><a href="../templates/gallery.html">TODAS</a></button>
             </div>
         </div>
-        
+
         <figure class="gallery__fotos"></figure> <!--aqui van las imagenes de la API-->
-        
-               
+
+
         <!-- Modal -->
         <div id="myModal" class="modal">
             <div class="pagination">
@@ -71,12 +77,15 @@
                     <section class="modal__info-justify">
                         <h2 id="modalTitle"></h2>
                         <p id="modalPrice"></p>
+                        <div class="center">
+                            <button class="button" id="addToCart__button">AÑADIR</button>
+                        </div>
                     </section>
                 </div>
+
             </section>
         </div>
     </main>
-
     <script src="../js/gallery.js"></script>
     <script src="../js/scripJS.js"></script>
 </body>
