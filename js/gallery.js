@@ -92,18 +92,24 @@ prevButton.addEventListener("click", showPrevImage);
 nextButton.addEventListener("click", showNextImage);
 
 function showPrevImage() {
-  if (currentIndex > 0) {
-    currentIndex--;
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      // Si estás en la primera página, ve a la última
+      currentIndex = data.length - 1;
+    }
     showModal(data[currentIndex]);
   }
-}
 
 function showNextImage() {
-  if (currentIndex < data.length - 1) {
-    currentIndex++;
+    if (currentIndex < data.length - 1) {
+      currentIndex++;
+    } else {
+      // Si estás en la última página, vuelve a la primera
+      currentIndex = 0;
+    }
     showModal(data[currentIndex]);
   }
-}
 
 // Botones filtros
 buttonCategory.addEventListener("click", function () {

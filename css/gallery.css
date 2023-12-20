@@ -198,13 +198,11 @@ img {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-
 #modalTitle {
   font-family: 'raleway', Helvetica, sans-serif;
   font-size: 24px;
   margin-bottom: 10px;
 }
-
 
 #modalPrice {
   font-family: 'raleway', Helvetica, sans-serif;
@@ -237,6 +235,7 @@ img {
   align-items: flex-end;
   min-width: 28vw;
   height: 74vh;
+  margin-top:-7%;
 }
 
 .close {
