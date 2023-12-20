@@ -1,6 +1,8 @@
-/* Contenedor principal */
-.about__container {
-    height: 90vh;
+/*Contenedor principal*/
+.about__container{
+    /* overflow-y: scroll; */
+    height: 93vh;
+
     display: flex;
     padding: 0; /* Ajuste del padding para pantallas de ordenadores */
 }
