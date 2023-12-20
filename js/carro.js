@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
       actualizarEstadoCarrito();
     }
   
-    // Ejemplo de cómo puedes agregar un producto al carrito (deberías llamar a esto desde el modal)
+    // Ejemplo del Producto a mostrar
     const productoEjemplo = {
       id: "001",
       title: "Foto Hombre",
