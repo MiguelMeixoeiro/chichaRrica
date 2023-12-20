@@ -199,3 +199,21 @@ function showAllImages(images) {
     photos.appendChild(imgElement);
   });
 }
+//Añado el boton del carrito
+addToCartButton.addEventListener("click", function () {
+  const productoSeleccionado = {
+      id: data[currentIndex].id,
+      title: data[currentIndex].title,
+      url: data[currentIndex].url,
+      price: data[currentIndex].price,
+  };
+
+  agregarProductoAlCarrito(productoSeleccionado);
+
+  modal.style.display = "none";
+  const mainHeader = document.getElementById("main-header");
+  mainHeader.style.display = "block";
+
+  // Redirección a carro.html
+  window.location.href = "carro.html";
+});
