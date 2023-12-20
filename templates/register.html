@@ -84,16 +84,28 @@
             <input class="control" id="password" name="password" type="password" placeholder="Contraseña" required> 
           </label>
           <span id="errorPassword" class="error"></span>
-        </div>  
+        </div>
+<!-- Grupo: Terminos y Condiciones -->
+			<div class="formulario__grupo" id="grupo__terminos">
+				<label class="formulario__label">
+					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+					Acepto los Terminos y Condiciones
+				</label>
+			</div>
+
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div>  
         <div class="form-group">
           <label>            
-            <button class="botons" type="submit" onclick="mostrarModal()">Registro</button>
+            <button id="boton" class="button" type="submit" onclick="mostrarModal()">Registro</button>
           </label>
         </div>
-        <div class="form-group"></div>
-        <label>
-          <a href="login.html" target="_self"><p>Iniciar Sesión</p></a>
-        </label>
+        <div class="form-group">
+          <label>
+            <button id="boton" class="button" type="button"><a href="../templates/login.html">Iniciar Sesión</button></a>
+          </label>
+        </div>
       </form>
     </section>
   </main>
@@ -124,11 +136,13 @@
 
   </script>
 
+
   </main>
 
   <footer>
-    <img src="../img/logoPlanoBlanco.svg" alt="Logotipo Miguel Meixoeiro">
+    
   </footer>
+  <script src="../js/scripJS.js"></script>
   <script src="../js/register.js"></script>
 </body>
 </html>
