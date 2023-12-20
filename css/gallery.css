@@ -91,6 +91,7 @@ header nav{
 .gallery__fotos {
     column-count: 3;
     gap: 30px; /* Espacios entre fotos */
+    
 }
 
 img {
@@ -101,19 +102,42 @@ img {
     cursor: pointer;
     border-radius: 0.1em;
     padding: 5px;
-    transition: all 0.3s;
+    transition: all 0.20s;
+    transition-timing-function: linear;
+    
 }
 
   
 /*Media queries*/
+@media only screen and (max-width:1000px){
+    .gallery__fotos {
+        column-count: 2;
+        gap: 20px; /* Espacios entre fotos */
+    }
+   
+}
+
 
 @media only screen and (max-width:900px){
-.gallery_filtersSubCategory{
-    display: flex;
-    margin: auto;
-    gap: 30px;
+    .gallery_filtersSubCategory{
+        display: flex;
+        margin: auto;
+        gap: 30px;
     
-}}
+}
+    .gallery__fotos {
+        column-count: 1;
+        gap: 10px; /* Espacios entre fotos */
+}
+
+}
+
+@media only screen and (max-width:840px){
+    .burger {
+        background-color: red;
+      }
+}
+
 
 @media only screen and (max-width:660px){
     .gallery_filtersSubCategory{
@@ -121,14 +145,14 @@ img {
         margin: auto;
         gap: 0px;
         
-    }}
+}}
 
-    @media only screen and (max-width:540px){
-        .gallery_filtersSubCategory{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: auto;
-            gap: 0px;
+@media only screen and (max-width:540px){
+    .gallery_filtersSubCategory{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto;
+        gap: 0px;
             
-        }}
+}}
