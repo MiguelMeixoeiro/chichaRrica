@@ -1,6 +1,6 @@
 /*Contenedor principal*/
 .about__container{
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     height: 93vh;
 
     display: flex;
