@@ -1,0 +1,36 @@
+# Node.js
+node_modules/
+
+# Archivos de configuración
+npm-debug.log
+yarn-error.log
+.env
+
+# Dependencias generadas
+package-lock.json
+yarn.lock
+
+# Archivos de compilación
+dist/
+build/
+*.log
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Archivos de configuración de editor
+.vscode/
+.idea/
+
+# Otros archivos generados durante el desarrollo
+*.log
+*.bak
+*.swp
