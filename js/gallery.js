@@ -209,3 +209,20 @@ function showAllImages(images) {
 }
 
 //prueba commit
+
+//cosas del carro
+
+
+// Función para mostrar el modal con el precio
+function showModal(item) {
+  // ...
+
+  // Modifica el siguiente bloque de código
+  const addToCartButton = document.getElementById("addToCart__button");
+  addToCartButton.addEventListener("click", function () {
+    agregarAlCarrito(item);
+    modal.style.display = "none";
+  });
+}
+
+
