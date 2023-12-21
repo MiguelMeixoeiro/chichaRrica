@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="icon" sizes="16x16 32x32 48x48" type="image/svg" href="./img/iconos/favicon.svg" />
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/normalize.css">
   <title>Miguel Meixoeiro</title>
 </head>
 <body class="no-scroll">
@@ -35,15 +35,29 @@
 
   <main class="hero fs" >
     <div  class="bg heroBig"></div>
+    <section class="main__cta">
+      <div class="card">
+        <img src="./img/foto2.jpg" alt="letrero de neon en un muro" class="img__cta">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg><p class="card__p--formato">IMPRESIONES EN GRAN FORMATO!</p>
+        <div class="card__content">
+          <p class="card__title">FOTOS EN GRAN FORMATO</p>
+          <p class="card__description">Transforma tus espacios con la elegancia de la fotografía de <strong>Miguel Meixoeiro</strong>. <br><br>Descubre nuestras impresiones en gran formato y lleva el arte a tu hogar hoy.</p>
+          <div class="center no-decoration">
+            <a href="./templates/gallery.html" class="button">VISITA LA GALERÍA</a>
+          </div>
+        </div>
+      </div>
+      
+    </section>
     <!-- slide rojo que aparece cuando clickamos en ACCESO -->
     <section class="sliderLateral" id="sliderLateralContainer">
-      <a class="navicon" id="sliderRojo">      <i class="fas fa-bars icon"></i>
-        </a>
+      
       <img src="./img/iconos/logoBlanco.svg" alt="Logotipo Miguel Meixoeiro" class="logoSlideBlanco">
 
       <section class="slider__formulario">
         
         <form class="form">
+          <a class="navicon" id="sliderRojo"><i class="fas fa-bars icon"></i></a>
           <input class="input" type="text" placeholder="Nombre">
           <input class="input" type="text" placeholder="E-Mail">
           <textarea class="textarea" placeholder="Mensaje"></textarea> 
@@ -70,5 +84,6 @@
     </a>
   </footer>
   <script src="./js/scripJS.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 </html>
