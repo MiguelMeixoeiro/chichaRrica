@@ -1,0 +1,108 @@
+body{
+    overflow-x: hidden;
+    margin: 0;
+    overflow-y: auto;
+
+    background-color: #262726;
+}
+
+/*Filtros categorías*/
+
+.gallery_filter{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.gallery__buttonCategory{
+    background-color: #262726;
+    color: white;
+    border: white solid 1px;
+    min-width: 13%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+
+.gallery__buttonCategory:hover{
+    font-weight: bolder;
+    border: white solid 2px;
+    
+    display: flex;
+    align-items: center;
+
+   
+}
+
+.gallery_filtersSubCategory{
+    display: flex;
+    margin: auto;
+    gap: 80px;
+    
+}
+
+.gallery__buttonSubCategory{
+    background-color: #262726;
+    color: white;
+    border: white solid 0.5px;
+    font-size: 0.8em;
+
+    display: none;
+    
+}
+
+/*Galería imágenes*/
+
+.gallery__fotos{
+    columns: 3 300px; /*ajustar tamaño imagenes*/
+    column-gap: 30px; /*espacios entre fotos*/
+    
+}
+
+img{
+    max-width: 100%;
+    margin-bottom: 2em;
+    cursor: pointer; 
+
+    border-radius: 0.1em;
+    padding: 5px;
+    transition: all .3s
+    
+}
+
+/* CLASES MODAL */
+
+
+
+/*Media queries*/
+@media only screen and (max-width:900px){
+.gallery_filtersSubCategory{
+    display: flex;
+    margin: auto;
+    gap: 30px;
+    
+}}
+
+@media only screen and (max-width:660px){
+    .gallery_filtersSubCategory{
+        display: flex;
+        margin: auto;
+        gap: 0px;
+        
+    }}
+
+    @media only screen and (max-width:540px){
+        .gallery_filtersSubCategory{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: auto;
+            gap: 0px;
+            
+        }}
