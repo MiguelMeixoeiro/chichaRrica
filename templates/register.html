@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="icon" sizes="16x16 32x32 48x48" type="image/svg" href="./img/favicon.svg" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/register.css">
+  <title>Miguel Meixoeiro</title>
+</head>
+<body class="no-scroll">
+  <header id="main-header">
+    <div class="menu__icon">
+      <i class="fas fa-bars icon"></i>
+    </div>
+ 
+  <!--Burger Menú-->
+  <input class="menu__btn" type="checkbox" id="menu__btn" />
+  <label class="menu__icon" for="menu__btn"><span class="navicon"></span></label>  
+  <!--Menú-->
+
+    <nav>
+      <a href="../index.html" class="nav__logo logo">
+      <img id="logoPrincipal" src="../img/iconos/logoBlanco.svg" alt="Logotipo Miguel Meixoeiro" class="hide-logo">
+      </a>
+      <ul>
+        <li><a href="../templates/login.html">ACCESO</a></li>
+        <li><a href="../templates/about.html">ABOUT</a></li>
+        <li><a href="../templates/gallery.html">GALERIA</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hero fs" >
+    <!-- <div  class="bg heroBig"></div> -->
+    <!-- slide rojo que aparece cuando clickamos en ACCESO -->
+    <section class="sliderLateral" id="sliderLateralContainer">
+
+      <img src="../img/logoBlanco.svg" alt="Logotipo Miguel Meixoeiro" class="logoSlideBlanco">
+
+      <section class="slider__formulario">
+        <form class="form">
+          <input class="input" type="text" placeholder="Nombre">
+          <input class="input" type="text" placeholder="E-Mail">
+          <textarea class="textarea" placeholder="Mensaje"></textarea> 
+          <div class="center">
+            <button class="button">Submit</button>
+          </div>
+        </form>
+      </section>
+      <section class="redes">
+        <img src="../img/facebook.svg" alt="" class="redes--formato">
+        <img src="../img/instagram.svg" alt="" class="redes--formato">
+        <img src="../img/linkedin.svg" alt="" class="redes--formato">
+        <img src="../img/twiter.svg" alt="" class="redes--formato twit">
+      </section>
+      
+
+    </section>
+    <!-- Contenido principal, incluyendo la imagen de fondo -->
+  </main>
+
+  <main class="contacto">
+    <section class="formulario">               
+      <h4>Crear Cuenta</h4>
+      <form action="#" method="post">                 
+        <div class="form-group">
+          <label>
+            <input class="control" id="nombre" name="nombre" placeholder="Nombre" required autocomplete="off">
+          </label>
+          <span id="errorNombre" class="error"></span>
+        </div>               
+        <div class="form-group">
+          <label>
+            <input class="control" id="email" name="email" placeholder="Correo" required autocomplete="off">
+          </label>
+          <span id="errorEmail" class="error"></span>
+        </div>
+        <div class="form-group">
+          <label>
+            <input class="control" id="password" name="password" type="password" placeholder="Contraseña" required autocomplete="off"> 
+          </label>
+          <span id="errorPassword" class="error"></span>
+        </div>  
+
+      <section class="botons">
+        <div class="form-group">
+          <label>            
+            <button class="button" type="submit" onclick="mostrarModal()">Registro</button>
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            <a class="button" href="login.html" target="_self" >Iniciar Sesión</a>
+          </label>
+        </div>
+      </section>
+      </form>
+    </section>
+  </main>
+
+  <!-- Agrega esto después de tu formulario -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <p>¡Muchas gracias por registrarse!</p>
+      <a href="../templates/gallery.html"><button onclick="galeria()">Galeria</button></a>
+    </div>
+  </div>
+
+  <script>
+    function mostrarModal() {
+      var modal = document.getElementById('myModal');
+      modal.style.display = 'block';
+    }
+
+    function cerrarModal() {
+      var modal = document.getElementById('myModal');
+      modal.style.display = 'none';
+    }
+
+    function galeria() {
+      window.location.href = "index.html"; // Reemplaza "index.html" con la URL de tu página de inicio
+    }
+
+  </script>
+
+
+  </main>
+
+  <footer>
+    <img src="../img/iconos/logoPlanoBlanco.svg" alt="Logotipo Miguel Meixoeiro">
+  </footer>
+  <script src="../js/scripJS.js"></script>
+  <script src="../js/register.js"></script>
+</body>
+</html>
